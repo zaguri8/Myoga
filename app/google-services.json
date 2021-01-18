@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "775213916515",
+    "firebase_url": "https://myoga-beec5.firebaseio.com",
+    "project_id": "myoga-beec5",
+    "storage_bucket": "myoga-beec5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775213916515:android:939c1324afc4be6cf2f356",
+        "android_client_info": {
+          "package_name": "com.example.myoga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775213916515-8aros0hlgtd44tl0mir88021v8kil2uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHmarQzE96x4Hg5oZZyLyearw3xVevuoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775213916515-8aros0hlgtd44tl0mir88021v8kil2uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

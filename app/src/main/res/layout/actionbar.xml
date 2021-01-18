@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#FAF1E7">
+
+    <ImageView
+        android:id="@+id/action_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:textColor="#FAF1E7"
+        android:textSize="24sp"
+        app:srcCompat="@drawable/logoactionbar1" />
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myoga.ui.home.HomeFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_wisdom"
+        android:name="com.example.myoga.ui.wisdom.WatchFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_wisdom_watch" />
+
+    <fragment
+        android:id="@+id/navigation_yoga"
+        android:name="com.example.myoga.ui.yoga.BreathingFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_yoga_breathing" />
+
+    <fragment
+        android:id="@+id/navigation_yoga_breathing"
+        android:name="com.example.myoga.ui.yoga.BreathingFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_yoga_breathing" />
+
+    <fragment
+        android:id="@+id/navigation_yoga_postures"
+        android:name="com.example.myoga.ui.yoga.PosturesFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_yoga_postures" />
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.myoga.ui.favorites.FavoritesFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/navigation_favorites_books"
+        android:name="com.example.myoga.ui.favorites.FavoritesBooksFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_books_favorites" />
+    <fragment
+        android:id="@+id/navigation_favorites_postures"
+        android:name="com.example.myoga.ui.favorites.FavoritesPosturesFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_postures_favorites" />
+
+    <fragment
+        android:id="@+id/navigation_yoga_meditation"
+        android:name="com.example.myoga.ui.yoga.MeditationFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_yoga_meditation" />
+
+
+    <fragment
+        android:id="@+id/navigation_wisdom_watch"
+        android:name="com.example.myoga.ui.wisdom.WatchFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_wisdom_watch" />
+
+    <fragment
+        android:id="@+id/navigation_wisdom_listen"
+        android:name="com.example.myoga.ui.wisdom.ListenFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_wisdom_listen" />
+
+    <fragment
+        android:id="@+id/navigation_wisdom_read"
+        android:name="com.example.myoga.ui.wisdom.ReadFragment"
+        android:label="Myoga"
+        tools:layout="@layout/fragment_wisdom_read" />
+</navigation>

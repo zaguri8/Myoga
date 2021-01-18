@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/yoga_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".ui.yoga.PosturesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/yoga_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:foregroundGravity="center">
+
+            <Button
+                android:id="@+id/btnBreathing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:foregroundGravity="center"
+                android:text="Breathing"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#9A610E"></Button>
+
+            <Button
+                android:id="@+id/btnPostures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:foregroundGravity="center"
+                android:text="Postures"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#9A610E"></Button>
+
+            <Button
+                android:id="@+id/btnMeditation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:text="Meditation"
+                android:textAlignment="center"
+                android:textColor="#9A610E"></Button>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/postures_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asana Postures"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:textColor="#bc6c25"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yoga_toolbar">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/AsanasRv"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:paddingBottom="160dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postures_text">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
