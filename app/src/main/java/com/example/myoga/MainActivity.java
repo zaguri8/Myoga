@@ -2,10 +2,13 @@ package com.example.myoga;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
@@ -20,8 +23,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebChromeClient;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -43,6 +49,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import static android.view.View.SYSTEM_UI_FLAG_FULLSCREEN;
 import static com.example.myoga.models.ActionsDataSource.getActions;
 import static com.example.myoga.models.Utils.openWebPage;
 
@@ -78,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void homeAction1(View view) {
         if (getActions().size() == 0) {
-            Toast.makeText(getApplicationContext(), "Loading links.. Please try again in a few seconds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Loading links.. Please make sure you are connected to a internet network", Toast.LENGTH_SHORT).show();
             return;
         }
         Uri uri = openWebPage(getApplicationContext(), getActions().get(0).getUrl());
@@ -92,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void homeAction2(View view) {
         if (getActions().size() < 2) {
-            Toast.makeText(getApplicationContext(), "Loading links.. Please try again in a few seconds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Loading links.. Please make sure you are connected to a internet network", Toast.LENGTH_SHORT).show();
             return;
         }
         Uri uri = openWebPage(getApplicationContext(), getActions().get(1).getUrl());
@@ -106,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void homeAction3(View view) {
         if (getActions().size() < 3) {
-            Toast.makeText(getApplicationContext(), "Loading links.. Please try again in a few seconds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Loading links.. Please make sure you are connected to a internet network", Toast.LENGTH_SHORT).show();
             return;
         }
         Uri uri = openWebPage(getApplicationContext(), getActions().get(2).getUrl());
@@ -160,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             } else {
                 //update ui (say hello to the user)
-                Toast.makeText(this, "Hi, " + currentUser.getEmail(), Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -1,5 +1,6 @@
 package com.example.myoga;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,7 +75,7 @@ public class VideoRecyclerViewAdapter extends RecyclerView.Adapter<VideoRecycler
                 break;
         }
         holder.webView_text.setText(videoName);
-        Utils.loadEmbedVideo(videoURL, holder.webView);
+        Utils.loadEmbedVideo(videoURL, holder.webView, context, 300, 200);
     }
 
     public int getItemCount() {

@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText etPassword;
     OnSuccessListener<AuthResult> successListener = authResult -> {
         //onSuccess
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, SplashActivity.class);
         startActivity(intent);
     };
 

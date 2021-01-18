@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/splashscreen"
+        android:layout_width="250sp"
+        android:layout_height="250sp"
+        android:layout_gravity="center"
+        android:src="@drawable/welcome"></pl.droidsonroids.gif.GifImageView>
+
+    <TextView
+        android:id="@+id/welcometv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+</LinearLayout>

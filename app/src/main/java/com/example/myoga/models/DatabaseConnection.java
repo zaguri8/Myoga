@@ -17,6 +17,8 @@ public class DatabaseConnection {
     private static DatabaseReference myogaHomeLinks = dbRef.child("links");
     private static DatabaseReference myogaVideos = dbRef.child("videos");
     private static DatabaseReference myogaQuate = dbRef.child("dailyQuate");
+    private static DatabaseReference myogaDVideo = dbRef.child("dVideo");
+    private static DatabaseReference myogaDVideo2 = dbRef.child("dVideo2");
 
     public static DatabaseReference getDbRef() {
         return dbRef;
@@ -28,6 +30,14 @@ public class DatabaseConnection {
 
     public static DatabaseReference getMyogaQuate() {
         return myogaQuate;
+    }
+
+    public static DatabaseReference getMyogaDVideo() {
+        return myogaDVideo;
+    }
+
+    public static DatabaseReference getMyogaDVideo2() {
+        return myogaDVideo2;
     }
 
     public static DatabaseReference getMyogaVideos() {

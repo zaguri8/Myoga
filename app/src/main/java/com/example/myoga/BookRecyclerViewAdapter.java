@@ -126,7 +126,7 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
                             @Override
                             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                                 BooksSourceData.Book b = snapshot.getValue(BooksSourceData.Book.class);
-                                if (b.getTitle().equals(title)) {
+                                if (b.getTitle().equals(title) && position <= FavBooks.size()) {
                                     Toast.makeText(context, title + " has been removed from Favorites.", Toast.LENGTH_SHORT).show();
                                     snapshot.getRef().removeValue();
                                     deleteItem(position);

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ import com.example.myoga.R;
 import com.example.myoga.models.DailyQuateDataSource;
 import com.example.myoga.models.NetworkChangeReceiver;
 import com.example.myoga.models.NetworkUtils;
+import com.example.myoga.models.Utils;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -28,6 +30,8 @@ public class HomeFragment extends Fragment implements Observer {
     TextView dQuate;
     TextView dQuateAuthor;
     TextView dQuateDate;
+    WebView dailyVideo1;
+    WebView dailyVideo2;
 
     @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -38,6 +42,8 @@ public class HomeFragment extends Fragment implements Observer {
         dQuate = root.findViewById(R.id.dQuate);
         dQuateAuthor = root.findViewById(R.id.dQuateAuthor);
         dQuateDate = root.findViewById(R.id.dQuateDate);
+        dailyVideo1 = root.findViewById(R.id.dailyVideoWV);
+        dailyVideo2 = root.findViewById(R.id.dailyVideoWV2);
         if (!NetworkUtils.isNetworkConnected(getContext())) {
             if (homeViewModel.getCachedQuate() != null) {
                 dQuate.setText(homeViewModel.getCachedQuate().getText());
@@ -54,7 +60,15 @@ public class HomeFragment extends Fragment implements Observer {
                 dQuateAuthor.setText("- " + quate.getAuthor() + " ❤");
                 dQuateDate.setText(quate.getDate());
             });
+            homeViewModel.getDailyVideoUrl1().observe(getViewLifecycleOwner(), videoURL -> {
+                Utils.loadEmbedVideo(videoURL, dailyVideo1, getContext(), 150, 100);
+            });
+            homeViewModel.getDailyVideoUrl2().observe(getViewLifecycleOwner(), videoURL -> {
+                Utils.loadEmbedVideo(videoURL, dailyVideo2, getContext(), 150, 100);
+            });
+
         }
+        //        Utils.loadEmbedVideo(videoURL, holder.webView, context);
         return root;
     }
 
